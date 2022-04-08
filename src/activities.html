@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Water</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="font/stylefont.css">
+    <link rel="stylesheet" href="css/swiper-bundle.css">
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+@@include('./parts/header-black.html')
+    <div class="container">
+        <section class="activities">
+            <div class="activities__title"><h1>Наши направления:</h1></div>
+            <div class="activities__list_wrapper">
+                <a href="activity-detail-custom.html" class="activities__list_item-wrapper">
+                    <div class="activities__list_item" style="background-image: url('images/act-1.jpg')"></div>
+                    <div class="activities__list_item-title">
+                        Система мониторинга состава сточных вод
+                    </div>
+                </a>
+                <a href="activity-detail-default.html" class="activities__list_item-wrapper">
+                    <div class="activities__list_item" style="background-image: url('images/act-2.jpg')"></div>
+                    <div class="activities__list_item-title">
+                        Рекультивация иловых полей
+                    </div>
+                </a>
+                <a href="activity-detail-default.html" class="activities__list_item-wrapper">
+                    <div class="activities__list_item" style="background-image: url('images/act-3.jpg')"></div>
+                    <div class="activities__list_item-title">
+                        Развертывание системы "Цифровой водоканал"
+                    </div>
+                </a>
+                <a href="activity-detail-default.html" class="activities__list_item-wrapper">
+                    <div class="activities__list_item" style="background-image: url('images/act-4.jpg')"></div>
+                    <div class="activities__list_item-title">
+                        Производство технологического оборудования
+                    </div>
+                </a>
+                <a href="activity-detail-default.html" class="activities__list_item-wrapper">
+                    <div class="activities__list_item" style="background-image: url('images/act-5.jpg')"></div>
+                    <div class="activities__list_item-title">
+                        Цифровые решения для ЖКХ и строительства
+                    </div>
+                </a>
+                <a href="activity-detail-default.html" class="activities__list_item-wrapper">
+                    <div class="activities__list_item" style="background-image: url('images/act-6.jpg')"></div>
+                    <div class="activities__list_item-title">
+                        Поиск скрытых утечек
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+
+
+    <section class="partnership">
+        <div class="partnership__title">
+            <h4>Хотите обсудить сотрудничество?</h4>
+        </div>
+        <div class="partnership__desc">
+            Оставьте свои данные, и наш специалист свяжется<br> с вами в ближайшее время
+        </div>
+        <div class="partnership__button"><button class="btn btn--fill js-feedback-show">Заполнить форму</button></div>
+    </section>
+
+
+@@include('./parts/footer.html')
+</body>
+</html>

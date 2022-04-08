@@ -1,0 +1,26 @@
+{
+  "name": "water",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "watch": "browser-sync start --server --serveStatic 'dist' --files 'dist'"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.49.10"
+  },
+  "dependencies": {
+    "hamburgers": "^1.2.1",
+    "inputmask": "^5.0.7",
+    "jquery": "^3.6.0"
+  }
+}
