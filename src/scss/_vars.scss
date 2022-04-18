@@ -126,7 +126,7 @@ $c-blue-800: #114A60;
             background-image: url("../images/lines-2.svg");
             background-position: left;
             width: 912px;
-            height: 676px;
+            height: 1000px;
             right: 0;
             top: 417px;
         }
@@ -142,7 +142,7 @@ $c-blue-800: #114A60;
             background-image: url("../images/lines-3.svg");
             background-position: left;
             width: 915px;
-            height: 461px;
+            height: 700px;
             left: 137px;
             top: 1299px;
         }
@@ -285,13 +285,14 @@ h4 {
         color: #ffffff;
         background-color: $c-brown-2;
         &:hover {
-
+            background-color: #464442;
         }
         &:active {
-
+            background-color: #114A60;
         }
         &:disabled {
-
+            background-color: $c-brown-2;
+            color: #777777;
         }
     }
     &--fill {
@@ -299,15 +300,18 @@ h4 {
         background-color: #ffffff;
         color: $c-brown-2;
         &:hover {
-
+            background-color: #4DA5DD;
+            color: #ffffff;
         }
         &:active {
-
+            background-color: #1D687D;
+            color: #ffffff;
         }
         &:disabled {
-
+            color: #E2E2E2;
         }
     }
+    transition: 100ms;
 }
 
 .section-title {

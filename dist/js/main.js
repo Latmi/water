@@ -1,6 +1,8 @@
 const swiper = new Swiper('.projects__swiper', {
     direction: 'horizontal',
     loop: false,
+    // autoHeight: true,
+    calculateHeight:true,
     navigation: {
         nextEl: '.projects .slider-arrow--next',
         prevEl: '.projects .slider-arrow--prev',
@@ -18,6 +20,17 @@ const swiperNews = new Swiper('.news__swiper', {
     },
 });
 
+const swiperWords = new Swiper('.words__swiper', {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    autoplay: {
+        delay: 4000,
+    },
+
+});
+
 $(function () {
 
     const $switchGIS = $('.js-switch-gis')
@@ -31,6 +44,7 @@ $(function () {
     const $feedbackOverlay = $('.feedback__overlay')
     const $hamburger = $('.hamburger')
     const $mobileMenu = $('.header__menu_wrapper')
+    const $projectsMore = $('.js-projects-more')
 
     $hamburger.on('click', function () {
         $(this).toggleClass('is-active')
@@ -92,5 +106,16 @@ $(function () {
         $modalFeedback.addClass('feedback--show')
     })
 
+    const defaultText = $projectsMore.first().children().text()
+    $projectsMore.on('click', function (e) {
+        e.preventDefault()
+        $(this).toggleClass('dropped')
+        if ($(this).hasClass('dropped')) {
+            $(this).children().text('Свернуть')
+        } else {
+            $(this).children().text(defaultText)
+        }
+        $(this).prev().toggleClass('fix-height')
+    })
 })
 

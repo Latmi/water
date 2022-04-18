@@ -1,6 +1,8 @@
 @import "vars";
 
-
+body {
+    //cursor: url("../images/water-cursor.png"), auto;
+}
 .hamburger {
     @include from(768px) {
         display: none;
@@ -258,13 +260,23 @@
             }
             flex: 0 0 322px;
             margin-bottom: 61px;
-            &-icon {
+            &:hover {
+                svg {
 
+                    path.icon-background {
+
+                        fill: #1D687D;
+                        transition: 200ms;
+                    }
+
+                }
             }
+
             &-name {
                 margin-top: 16px;
             }
         }
+
     }
 }
 
@@ -305,6 +317,10 @@
     margin-top: 119px;
     &__wrapper {
         //background-color: white;
+        @include to(767px) {
+            max-width: 287px;
+            margin: 30px auto;
+        }
     }
     &__title {
         @include to(767px) {
@@ -326,37 +342,47 @@
                 width: 100%;
             }
             @include to(767px) {
-                flex: 0 0 511px;
+                flex: unset;
             }
             overflow: hidden;
-            width: calc(517px + 490px)
+            width: calc(517px + 490px);
+            position: relative;
         }
         &_overlay {
             @include to(1279px) {
-                margin-top: -376px;
+                //margin-top: -376px;
             }
             @include to(767px) {
                 margin-left: 0;
-                height: 446px;
-                margin-top: -455px;
+                //height: 446px;
+                //margin-top: -455px;
             }
             background-color: #ffffff;
-            height: 365px;
+            height: 100%;
             margin-left: 98px;
-            margin-top: -316px;
+            margin-top: 51px;
+            position: absolute;
+            width: calc(100% + 316px);
         }
     }
     &__nav {
         @include to(1279px) {
-            margin-right: 50px;
+            background-color: transparent;
+        }
+        @include to(767px) {
+            margin-top: -51px;
+            z-index: 1;
         }
         flex: 1 0 auto;
-        align-self: flex-end;
+        background-color: #ffffff;
+        margin-top: 51px;
         &_wrapper {
+            height: calc(100% - 34px);
             display: flex;
             justify-content: space-between;
+            align-items: flex-end;
             width: 90px;
-            margin: 0 auto 32px;
+            margin: 0 auto;
         }
     }
     &__slide {
@@ -366,7 +392,6 @@
                 flex-direction: column;
             }
             display: flex;
-            align-items: flex-end;
         }
         &_image {
             @include to(1279px) {
@@ -390,6 +415,7 @@
             box-sizing: border-box;
             flex: 0 0 490px;
             padding-left: 42px;
+            margin-top: 81px;
             &-title {
 
             }
@@ -399,12 +425,15 @@
             }
             &-desc {
                 margin-top: 21px;
-                max-height: 140px;
+                &.fix-height {
+                    max-height: 140px;
+                }
                 text-overflow: ellipsis;
                 overflow: hidden;
             }
             &-more {
                 margin-top: 28px;
+                margin-bottom: 50px;
             }
         }
     }
@@ -505,6 +534,7 @@
         &_image {
             img {
                 width: 100%;
+                max-height: 200px;
             }
         }
         &_info {
@@ -719,6 +749,7 @@
             flex: 0 0 auto;
             img {
                 width: 100%;
+                max-height: 200px;
             }
         }
         &_info {
@@ -1026,6 +1057,30 @@
     }
 }
 
+.words {
+    position: relative;
+    &__item {
+        @include to(1279px) {
+            font-size: 80px;
+            line-height: 70px;
+        }
+        @include to(767px) {
+            font-size: 40px;
+            line-height: 30px;
+            margin-top: 30px;
+        }
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 114px;
+        line-height: 99px;
+        font-weight: 700;
+        &--right {
+            text-align: right;
+        }
+    }
+    &__swiper {
+        overflow: hidden;
+    }
 
-
+}
 
